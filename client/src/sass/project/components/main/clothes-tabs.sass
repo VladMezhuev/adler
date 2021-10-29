@@ -1,0 +1,167 @@
+.clothes-tabs-wrapper
+  position: relative
+  mt: -50px
+
+  +mq-md
+    mt: -200px
+
+  +mq-lg
+    mt: -350px
+  
+.clothes-tabs
+  pos: relative
+  &__
+    &tabs-wrapper 
+      d: flex
+      flex-direction: column
+      align-items: center
+
+      +mq-md
+        flex-direction: row
+        jc: space-between
+        pa: 0px 95px
+
+    &image-part 
+      pos: relative
+      z-index: 3
+
+    &image-wrapper
+      w: 200px
+      z-index: 2
+
+      +mq-lg
+        w: 333px
+        h: 573px
+
+    &abs-image
+      d: none
+
+      +mq-xl
+        d: block
+        pos: absolute
+        top: -50px
+        right: 0
+        w: 306px
+        h: 89px
+
+    &abs-image-rev
+      d: none
+
+      +mq-xl
+        d: block
+        pos: absolute
+        bottom: -10vw
+        left: -50px
+        w: 358px
+        h: 149px
+
+    &abs-circles
+      d: none
+
+      +mq-xl
+        d: block
+        pos: absolute
+        top: 50%
+        left: 40%
+        w: 334px
+        h: 489px
+        trans: translateY(-50%)
+        z-index: 6
+
+    &abs-elios
+      d: none
+
+      +mq-xl
+        d: block
+        pos: absolute
+        top: 0
+        right: 0
+        w: 550px
+        h: 550px
+        z-index: 1
+
+
+.tabs-list
+  d: flex
+  flex-direction: column
+  ai: flex-start
+  mb: 30px
+
+  +mq-lg
+    align-self: flex-end
+    mb: 85px
+
+.category-row
+  d: flex
+  ai: center
+
+  &__
+    &category
+      color: var(--theme-text-3)
+      fs: 18px
+      fw: 900
+      ft: uppercase
+      mr: 20px
+      cursor: pointer
+
+      +mq-lg
+        fs: 29px
+        mr: 45px
+
+      &:last-child
+        mr: 0
+
+      &.is-active
+        color: var(--theme-text-2)
+
+.clothes-row 
+  d: flex
+  ai: center
+  ma: 35px 0 5px
+
+  &__
+    &column
+      d: flex
+      flex-direction: column
+      ai: flex-start
+      mr: 15px
+
+      +mq-lg
+        mr: 30px
+
+    &category
+      pos: relative
+      color: var(--theme-text-3)
+      fs: 13px
+      ft: uppercase
+      lh: 30px
+      fw: 400
+      mb: 5px
+
+      &::before
+        content: ''
+        pos: absolute
+        left: 0
+        bottom: 5px
+        w: 0%
+        h: 2px
+        bg-color: var(--theme-accent-green-light)
+        tr: .3s
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          &::before
+            w: 100%
+
+      
+
+.fade
+  animation: fade 1s
+
+@keyframes fade
+  from
+    trans: translateX(30px)
+    opacity: 0.1
+  to
+    trans: translateX(0px)
+    opacity: 1

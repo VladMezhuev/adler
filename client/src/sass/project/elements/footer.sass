@@ -1,0 +1,93 @@
+.footer-wrapper
+  pa: 40px 0px
+  bg-color: var(--theme-accent-dark)
+
+  +mq-lg
+    pa: 71px 0px 63px
+
+.footer
+  pos: relative
+  w: 100%
+  d: flex
+  flex-direction: column
+
+  &__
+    &top-row
+      d: flex
+      flex-direction: column
+      mb: 30px
+
+      +mq-md
+        flex-direction: row
+        ai: center
+        mb: 45px
+
+
+    &bottom-row
+      d: flex
+      flex-direction: column
+      
+
+      +mq-lg
+        flex-direction: row
+        ai: center
+        jc: space-between
+
+    &info
+      d: flex
+      flex-direction: column
+      mt: 20px
+      
+
+      +mq-md
+        flex-direction: row
+        ai: center
+        ml: 185px
+        mt: 0px
+
+      +mq-xl
+        ml: 210px
+
+    &development
+      fs: 12px
+      fw: 300
+      color: var(--theme-text-7)
+
+    &search
+      w: 13px
+      h: 13px
+      d: none
+
+      +mq-lg
+        d: block
+
+    &abs-wrapper
+      pos: absolute
+      top: -60px
+      left: 0
+      w: 145px
+      z-index: 5
+
+      +mq-lg
+        top: -120px
+        w: 291px
+        h: 85px
+
+.tel-wrapper
+  d: flex
+  ai: center
+  mr: 32px
+
+  &__
+    &image-wrapper
+      mr: 10px
+    
+    &tel
+      fs: 18px
+      fw: 900
+      color: var(--theme-text-4)
+
+    &mail
+      fs: 13px
+      fw: 300
+      color: var(--theme-text-9)

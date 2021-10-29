@@ -1,0 +1,50 @@
+include ../../../mixins/top-slider
+include ../../../mixins/index
+
+-
+  const topSlider = [
+    {
+      image: 'top-slider-1.png',
+      title: 'Mobility Speed Stripe1',
+      subtitle: "MEN'S STANDARD FIT GOLF POLO",
+      newPrice: '$75',
+      oldPrice: '$100'
+    },
+    {
+      image: 'top-slider-1.png',
+      title: 'Mobility Speed Stripe2',
+      subtitle: "MEN'S STANDARD FIT GOLF POLO",
+      newPrice: '$75',
+      oldPrice: '$100'
+    },
+    {
+      image: 'top-slider-1.png',
+      title: 'Mobility Speed Stripe3',
+      subtitle: "MEN'S STANDARD FIT GOLF POLO",
+      newPrice: '$75',
+      oldPrice: '$100'
+    },
+    {
+      image: 'top-slider-1.png',
+      title: 'Mobility Speed Stripe4',
+      subtitle: "MEN'S STANDARD FIT GOLF POLO",
+      newPrice: '$75',
+      oldPrice: '$100'
+    },
+  ]
+
++b.top-slider-wrapper 
+  +e.bg-wrapper
+    +e.bg.IMG(src='../../../static/img/main/main-top-bg.png')
+    +e.green-mask
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.slider-wrapper 
+      +b.main-top-slider 
+        each slide in topSlider
+          +topSlider(slide)
+      +b.abs-circle.A(href='#sales')
+        +e.image-wrapper
+          +e.image.IMG(src='../../../static/img/abs/arrow.svg')
+
+        
+

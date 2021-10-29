@@ -1,0 +1,6 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin partnerSlider(slide)
+  +b.main-partners-slide
+    +e.image-wrapper.A(href='#' target='_blank')
+      +e.image.IMG(src='../../../static/img/main/partners/' + slide.image)

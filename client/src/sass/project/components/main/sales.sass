@@ -1,0 +1,72 @@
+.sales-wrapper
+  pos: relative 
+  mt: -100px
+  pointer-events: none
+  pt: 27vw
+  z-index: 3
+
+  +mq-sm
+    mt: -130px
+    pt: 20vw
+
+  +mq-md
+    mt: -110px
+
+  +mq-lg
+    mt: -150px
+    pt: 15vw 
+
+  +mq-xl
+    mt: -245px
+
+  &__
+    &bg-wrapper
+      pos: absolute
+      top: 0
+      left: 0
+      w: 100%
+      h: 1300px
+      pointer-events: none
+
+    &image-bg
+      d: block
+      pos: relative
+      w: 100%
+      h: 100%
+      object-fit: cover
+      object-position: top right
+      z-index: 2
+
+
+.white-line-wrapper
+  pos: relative
+  w: 100%
+  h: 200px
+  trans: skewY(-15deg)
+  bg-color: var(--theme-accent-white)
+  z-index: 2
+  mt: 0px
+
+  +mq-md
+    // h: 200px
+    mt: 150px
+
+  +mq-lg
+    mt: 0px
+
+.white-line
+  pos: relative
+  z-index: 2
+
+  &__
+    &abs-image-wrapper 
+      pos: absolute
+      top: 55px
+      right: 15%
+      w: 150px
+      h: 50px
+      trans: rotate(15deg)
+
+      +mq-md
+        w: 306px
+        h: 89px

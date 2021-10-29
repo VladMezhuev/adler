@@ -1,0 +1,15 @@
+include ./../../../node_modules/bemtopuginvue/bemto.pug
+
+mixin topSlider(slide)
+  +b.main-top-slide 
+    +e.image-part 
+      +e.image-wrapper.A(href="#")
+        +e.image.img.IMG(src='../../../static/img/main/top-slider/' + slide.image)    
+    +e.text-part
+      +e.text-wrapper 
+        +e.title.A(href='#')= slide.title
+        +e.subtitle.P= slide.subtitle
+        +e.price 
+          +e.new-price.SPAN= slide.newPrice
+          +e.old-price.SPAN= slide.oldPrice
+        +e.button.A(href="#") Go to product

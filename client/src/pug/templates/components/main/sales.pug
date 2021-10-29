@@ -1,0 +1,35 @@
+include ../../../mixins/index
+
++b.sales-wrapper.SECTION
+  +e.bg-wrapper
+    +e.image-bg.IMG(src='../../../static/img/main/main-bottom-bg.png')
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.sales-leaders#sales
+      +e.title.H2 #[+e.span.SPAN Sales leaders] this week
+      +e.row 
+        +e.column.--lg
+          +e.image-wrapper.--lg.A(href='#')
+            +e.image.img.IMG(src='../../../static/img/main/saled/saled-main-1.png')
+          +b.image-desc 
+            +e.name.A(href='#') Nike Air Max 2017
+            +e.price-wrapper 
+              +e.old-price.SPAN $220
+              +e.new-price.SPAN $190
+        +e.column.--sm
+          +e.grid
+            +e.image-wrapper.--sm.A(href='#')
+              +e.image.img.IMG(src='../../../static/img/main/saled/saled-main-2.png')
+            +b.image-desc 
+              +e.name.A(href='#') NIKE IMPOSSIBLY LIGHT
+              +e.price-wrapper 
+                +e.old-price.SPAN $100
+                +e.new-price.SPAN $80
+            +e.image-wrapper.--sm.A(href='#')
+              +e.image.img.IMG(src='../../../static/img/main/saled/saled-main-3.png')
+            +b.image-desc 
+              +e.name.A(href='#') HURLEY DRI-FIT DIXON
+              +e.price-wrapper 
+                +e.old-price.SPAN $60
+                +e.new-price.SPAN $39
+
+  

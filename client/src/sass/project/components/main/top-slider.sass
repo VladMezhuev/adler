@@ -1,0 +1,257 @@
+.slider-wrapper
+  pos: relative
+  w: 100%
+  pa: 35px 0px
+  z-index: 2
+
+  .slick-dots
+    pos: absolute
+    d: flex
+    align-items: center
+
+    +mq-md
+      top: 75%
+      right: 35%
+
+    +mq-lg
+      top: 62%
+      right: 40%
+
+    +mq-xl
+      top: 50%
+
+    li
+      fs: 0
+      ma: 0 4px
+      br: 1px solid var(--theme-accent-white)
+      br-radius: 50%
+      
+    button
+      br: 0px
+      pa: 0px
+      w: 5px
+      h: 5px
+      bg: var(--theme-accent-white)
+      cursor: pointer
+      outline: none
+
+    .slick-active
+      button
+        bg: none
+
+.main-top-slider
+  
+  +mq-lg
+    ma: 0px -6px
+
+.main-top-slide
+  pa: 0px 6px
+  d: flex !important
+  align-items: center
+  flex-direction: column
+
+  +mq-md
+    flex-direction: row
+    align-items: flex-start
+    justify-content: space-around
+
+  +mq-lg
+    justify-content: space-between
+
+  &__
+    &content
+      d: flex
+      flex-direction: column
+      ai: center
+
+      +mq-lg
+        flex-direction: row
+        ai: flex-start
+
+    &image-part
+
+      +mq-lg
+        ml:60px
+
+    
+    &image-wrapper
+      pos: relative
+      d: block
+      w: 244px
+      h: 342px
+
+      +mq-lg
+        w: 350px
+        h: 470px
+
+      +mq-xl
+        w: 430px
+        h: 603px
+        
+
+      &::before
+        content: ''
+        pos: absolute
+        top: 50%
+        left: 50%
+        trans: translate(-50%, -50%)
+        w: 308px
+        h: 308px
+        br-radius: 50%
+        bg-color: var(--theme-accent-white)
+        z-index: 2
+
+        +mq-lg
+          w: 470px
+          h: 470px
+
+        +mq-xl
+          w: 543px
+          h: 543px
+    &image
+      pos: relative
+      z-index: 3
+
+    &text-wrapper
+      d: flex
+      flex-direction: column
+      mt: 40px
+
+      +mq-lg
+        ml: 60px
+        mt: 35px
+        pr: 65px
+
+ 
+
+    &title
+      fs: 20px
+      fw: 900
+      ft: uppercase
+      lh: 62px
+
+      +mq-lg
+        fs: 28px
+
+      +mq-xl
+        fs: 32px
+
+    &subtitle
+      fs: 12px
+      fw: 300
+      lh: 28px
+      ft: uppercase
+      mt: -10px
+      
+      +mq-lg
+        fs: 15px
+
+    &price
+      d: flex
+      ai: flex-end
+      mt: 35px
+    
+    &new-price
+      fs: 18px
+      fw: 900
+      mr: 16px
+
+      +mq-lg
+        fs: 32px
+
+    &old-price
+      fs: 15px
+      fw: 300
+      fd: line-through
+      pb: 3px
+
+      +mq-lg
+        fs: 20px
+
+    &button
+      d: inline-flex
+      ai: center
+      jc: center
+      w:  150px
+      h: 40px
+      bg-color: var(--theme-accent-dark)
+      fd: none
+      color: inherit
+      ft: uppercase
+      fs: 12px
+      fw: 300
+      mt: 25px
+
+      +mq-lg
+        w:  205px
+        h: 50px
+        mt: 35px
+        fs: 15px
+
+      +mq-xl
+        mt: 43px
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          color: var(--theme-text-2)
+          fw: 400
+          br: 1px solid var(--theme-accent-white)
+
+    
+.abs-circle
+  pos: absolute
+  right: 11%
+  bottom: 0
+  cursor: pointer
+  br-radius: 50%
+  tr: .3s
+
+  +mq-lg
+    top: 50%
+    trans: translateY(-50%)
+    bottom: auto
+    
+
+  &::after
+    content: ''
+    pos: absolute
+    top: 50%
+    left: 50%
+    w: 0px
+    h: 0px
+    bg-color: transparent
+    br-radius: 50%
+    trans: translate(-50%, -50%)
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94, 104, 121, .4)
+    tr: .3s
+
+  
+  &__
+    &image-wrapper
+      pos: relative
+      w: 78px
+      h: 78px
+      br-radius: 50%
+      bg-color: var(--theme-accent-white)
+      d: flex
+      ai: center
+      jc: center
+
+      +mq-lg
+        w: 96px
+        h: 96px
+    &image
+      tr: .3s
+
+  @media (hover: hover) and (pointer: fine)
+    &:hover
+      box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, .3)
+
+      &::after
+        w: 85%
+        h: 85%
+      .abs-circle
+        &__
+          &image
+            transform: scale(1.3)
+      

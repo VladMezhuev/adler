@@ -1,0 +1,171 @@
+.sales-leaders
+  pos: relative 
+  z-index: 2
+  pointer-events: auto
+  z-index: 3
+  &__
+    &title
+      fs: 18px
+      fw: 700
+      lh: 33px
+      ft: uppercase
+      color: var(--theme-text-1)
+      ta: center
+      mb: 30px
+
+      +mq-md
+        fs: 25px
+        lh: 53px
+        ta: right
+    
+    &span
+      color: var(--theme-text-2)
+
+    &row
+      d: flex
+      ai: center
+      flex-direction: column
+
+      +mq-md
+        flex-direction: row
+        ai: flex-start
+        ma: 0px -6px
+
+      +mq-xl
+        ma: 0 -6px
+
+    &column
+      pa: 0px
+
+      +mq-md
+        pa: 0 6px
+
+      &--
+        &lg
+          w: 100%
+
+          +mq-sm
+            w: 90%
+
+          +mq-md
+            w: 60%
+
+          +mq-lg
+            w: 66%
+
+        &sm
+          w: 100%
+
+          +mq-sm
+            w: 90%
+
+          +mq-md
+            w: 40%
+
+          +mq-lg
+            w: 34%
+            pl: 30px
+      
+    &grid
+      d: flex
+      flex-direction: column
+      ai: flex-start
+      w: 100%
+
+    &image-wrapper
+      w: 100%
+      d: block
+      overflow: hidden
+
+      &--
+        &lg
+          +mq-till-md
+            h: 170px
+
+          +mq-md
+            h: 380px
+
+          +mq-lg
+            h: 542px
+
+        &sm
+          h: 170px
+
+          +mq-lg
+            h: 226px
+            mt: 20px
+
+            &:first-child
+              mt: 0px
+    
+    &image
+      tr: .3s
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          trans: scale(1.1)
+
+.image-desc
+  d: flex
+  ai: center
+  jc: space-between
+  w: 100%
+  h: 30px
+  bg-color: var(--theme-accent-white)
+  pa: 0px 20px
+  mb: 10px
+
+  +mq-lg
+    mb: 0px
+    h: 69px
+
+  &__
+    
+    &name
+      pos: relative
+      fs: 12px
+      fw: 700
+      lh: 12px
+      ft: uppercase
+      color: var(--theme-text-3)
+      tr: .3s
+
+      &::after
+        content: ''
+        pos: absolute
+        bottom: 0
+        left: 0
+        w: 100%
+        h: 0px
+        bg-color: var(--theme-accent-dark)
+        tr: .2s
+
+      +mq-lg
+        fs: 15px
+        lh: 20px
+
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          &::after
+            h: 1px
+
+    &price-wrapper
+      d: flex
+      ai: center
+
+    &old-price
+      fs: 13px
+      fw: 300
+      color: var(--theme-text-8)
+      td: line-through
+      mr: 10px
+
+    &new-price
+      fs: 15px
+      fw: 900
+      color: var(--theme-text-2)
+      ft: uppercase
+
+    
+
+    

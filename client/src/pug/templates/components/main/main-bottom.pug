@@ -1,0 +1,86 @@
+include ../../../mixins/product-slider
+include ../../../mixins/partner-slider
+include ../../../mixins/index
+
+-
+  const productSlider = [
+    {
+      image: 'main-slider-1.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+    {
+      image: 'main-slider-2.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+    {
+      image: 'main-slider-3.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+    {
+      image: 'main-slider-1.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+    {
+      image: 'main-slider-2.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+    {
+      image: 'main-slider-3.png',
+      name: 'HURLEY DRI-FIT DIXON',
+      price: '$39'
+    },
+  ]
+
+  const partnerSlider = [
+    {
+      image: 'partner-1.svg'
+    },
+    {
+      image: 'partner-2.svg'
+    },
+    {
+      image: 'partner-3.svg'
+    },
+    {
+      image: 'partner-4.svg'
+    },
+    {
+      image: 'partner-5.svg'
+    },
+     {
+      image: 'partner-3.svg'
+    },
+  ]
+
++b.main-grey-wrapper
+  +b.white-line-wrapper
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+      +b.white-line 
+        +e.abs-image-wrapper 
+          +e.abs-image.img.IMG(src='../../../static/img/abs/abs-lines.png')
+  +b.grey-bg
+    +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+      +b.main-grey
+        +e.product-slider-wrapper
+          +b.main-product-slider
+            each slide in productSlider
+              +productSlider(slide)
+
+        +e.partners-slider-wrapper
+          +e.title.H2 Trust us 
+          +b.main-partners-slider 
+            each slide in partnerSlider
+              +partnerSlider(slide)
+
+        +b.bottom-text 
+          +e.paragraph-wrapper 
+            +e.paragraph.P Lorem ipsum dolor sit amet, id fugit omnesque vix, clita nusquam per at. Officiis comprehensam has ei, sit corpora antiopam ad. Minimum voluptaria vis ad, sale novum nonumy mel id. Modus conceptam at mea. Per tamquam debitis voluptatum at. Explicari voluptaria moderatius ea est, natum doming cum eu.
+          +e.paragraph-wrapper 
+            +e.paragraph.P Per ea eripuit repudiare scribentur, facer intellegam delicatissimi qui ei. Sale tation vidisse eam id, nibh dolor petentium quo ne. Mazim postulant iudicabit ius in, cu ius velit euripidis, et has inani deserunt instructior. Malis epicuri an mea, at mundi adipisci neglegentur duo. Duis exerci neglegentur te mel, no choro rationibus vel. Inermis definitionem nec ex, has meis vitae persecuti cu.
+          +e.paragraph-wrapper 
+            +e.paragraph.P Euripidis deseruisse usu id. Ei augue corpora electram pro, rebum putant ex mea, nam eu justo aperiri pertinax. Regione dolorum sit ne, nonumes petentium ei est, sed aeterno volumus ad. Doming omittam te qui, mutat possim deterruisset pri in. Inermis docendi id pri.

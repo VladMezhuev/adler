@@ -1,0 +1,34 @@
+include ./../../mixins/index
+
++b.footer-wrapper.FOOTER
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.footer 
+      +e.top-row
+        +e.top
+          +b.logo.--footer.A(href="#") shop shop
+        +e.info 
+          +b.tel-wrapper.A(href='tel:+380501579581')
+            +e.image-wrapper
+              +e.image.IMG(src='./../../static/img/header-footer/footer-phone.png')
+            +e.tel.SPAN + 38 050 157-95-81 
+          +e.mail.A(href='mailto:info@gmail.com') info@gmail.com
+      +e.bottom-row
+        +e.development.P Developed by WebCase
+
+        +b.menu-body
+          +e.list.UL 
+            +e.item.js-menu-link.LI 
+              +e.link.A(href="#") Home
+            +e.item.js-menu-link.LI 
+              +e.link.--active.A(href="#") Catalog
+            +e.item.js-menu-link.LI 
+              +e.link.A(href="#") Payment and delivery
+            +e.item.js-menu-link.LI 
+              +e.link.A(href="#") Contacts
+            +e.item.js-menu-link.LI 
+              +e.link.A(href="#") About us
+        +e.search-wrapper.A(href='#')
+          +e.search.IMG(src='../../../static/img/header-footer/menu-search.svg')
+      
+      +e.abs-wrapper 
+        +e.abs-image.img.IMG(src='../../../static/img/abs/abs-lines.png')    

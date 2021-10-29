@@ -1,0 +1,33 @@
+include ../../../mixins/index
+
++b.clothes-tabs-wrapper.SECTION 
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +b.clothes-tabs
+      +e.tabs-wrapper 
+        +b.tabs-list 
+          +b.category-row 
+            +e.category.js-category.SPAN(data-image='../../../static/img/main/whom/man.png') men
+            +e.category.js-category.SPAN(data-image='../../../static/img/main/whom/women.png') women
+            +e.category.js-category.is-active.SPAN(data-image='../../../static/img/main/whom/boy.png') kids 
+          +b.clothes-row 
+            +e.column 
+              +e.category.A(href='#') Jackets
+              +e.category.A(href='#') Shirts
+            +e.column 
+              +e.category.A(href='#') Pants
+              +e.category.A(href='#') Shorts
+            +e.column 
+              +e.category.A(href='#') Footwear
+              +e.category.A(href='#') Accessories
+        +e.image-part 
+          +e.image-wrapper 
+            +e.image.js-image.img.IMG(src='../../../static/img/main/whom/boy.png')
+
+      +e.abs-image 
+        +e.image.img.IMG(src='../../../static/img/abs/abs-lines.png')
+      +e.abs-image-rev 
+        +e.img-rev.img.IMG(src='../../../static/img/abs/lines-rev.png') 
+      +e.abs-circles
+        +e.circles-image.img.IMG(src='../../../static/img/abs/abs-ellips.png')
+      +e.abs-elios 
+        +e.elios-image.img.IMG(src='../../../static/img/abs/abs-main-elios.png')

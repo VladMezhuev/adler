@@ -1,0 +1,12 @@
+extends ./base/base
+
+block header 
+  include ./base/header
+block content 
+  +b.main.MAIN
+    include ../mixins/index
+    include ./components/main/top-slider
+    include ./components/main/clothes-tabs
+    include ./components/main/sales
+    include ./components/main/main-bottom
+

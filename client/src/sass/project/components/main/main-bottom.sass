@@ -1,0 +1,139 @@
+.main-grey-wrapper
+  pos: relative
+  z-index: 1
+
+.grey-bg
+  bg-color: var(--theme-accent-grey)
+  w: 100%
+  mt: -250px
+  pt: 180px
+  pb: 150px
+
+.main-grey
+  pos: relative
+  z-index: 4
+
+  &__
+    &partners-slider-wrapper 
+      mt: 160px
+
+    &title
+      fs: 25px
+      fw: 700
+      lh: 53px
+      ft: uppercase
+      color: var(--theme-text-3)
+      mb: 40px
+
+  .slick-dots
+    pos: absolute
+    d: flex
+    align-items: center
+
+    +mq-md
+      bottom: -10%
+      left: 50%
+      trans: translateX(-50%)
+
+    +mq-lg
+      bottom: -20%
+
+    li
+      fs: 0
+      ma: 0 4px
+      br: 1px solid var(--theme-accent-green-light)
+      br-radius: 50%
+      
+    button
+      br: 0px
+      pa: 0px
+      w: 5px
+      h: 5px
+      bg: var(--theme-accent-green-light)
+      cursor: pointer
+      outline: none
+
+    .slick-active
+      button
+        bg: none
+
+.main-product-slide
+  pa: 0px 6px 
+  position: relative
+  z-index: 4
+  
+  &__
+    &image-wrapper
+      w: 100%
+      h: 306px
+      pos: relative
+      z-index: 4
+      tr: .3s
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          .main-product-slide
+            &__
+              &hover
+                h: 100%
+              
+              &hover-btn
+                h: 37px
+                fs: 12px
+
+    &hover
+      pos: absolute
+      top: 0
+      left: 0
+      w: 100%
+      h: 0%
+      d: flex
+      ai: center
+      jc: center
+      bg-color: rgba(0, 0, 0,.3)
+      tr: .3s
+
+    &hover-btn
+      d: inline-flex
+      ai: center
+      jc: center
+      w: 151px
+      h: 0px
+      ft: uppercase
+      fs: 0px
+      fw: 400
+      bg-color: var(--theme-accent-green-light)
+      color: var(--theme-text-1)
+      tr: .3s
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          br-radius: 10px
+
+.main-partners-slide
+  pa: 0px 6px
+  d: flex !important
+  ai: center
+  jc: center
+
+  &__
+    &image
+      opacity: .3
+      tr: .3s
+
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          opacity: .6
+
+.bottom-text
+  mt: 80px
+  fs: 13px
+  fw: 400
+  lh: 24px
+  color: var(--theme-text-5)
+
+  &__
+    &paragraph-wrapper
+      mb: 20px
+      &:last-child
+        mb: 0px

@@ -1,0 +1,31 @@
+.top-slider-wrapper
+  w: 100%
+  h: 818px
+
+  &__
+    &bg-wrapper
+      pos: absolute
+      top: 0
+      left: 0
+      w: 100%
+      h: 818px
+      pointer-events: none
+    
+    &bg
+      d: block
+      pos: relative
+      w: 100%
+      h: 100%
+      object-fit: cover
+      object-position: top left
+      z-index: 2
+
+    &green-mask
+      pos: absolute
+      top: 0
+      left: 0
+      z-index: 1
+      w: 100%
+      h: 98%
+      bg-color: var(--theme-accent-green)
+      clip-path: polygon(0 0, 100% 0, 100% calc(100% - 26.7vw), 0 100%)

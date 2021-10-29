@@ -1,0 +1,283 @@
+.header-wrapper
+  z-index: 999
+  bg-color: var(--theme-accent-green-light)
+  
+  +mq-till-lg
+    pos: sticky
+    top: 0
+    left: 0
+
+  +mq-lg
+    bg-color: var(--theme-primary-black-tr)
+    position: relative
+
+
+.header
+  d: flex
+  ai: center
+  jc: space-between
+  w: 100%
+  h: 86px
+
+  +mq-lg
+    h: 110px
+
+  &__
+    &right-part, &left-part
+      d: flex
+      ai: center
+
+  .dropdown
+    mr: 15px
+
+    +mq-xl
+      mr: 27px
+
+    &:last-child
+      mr: 0
+
+.logo
+  ft: uppercase
+  fs: 20px
+  fw: 900
+
+  &--
+    &header
+      color: var(--theme-text-1)
+
+    &footer
+      color: var(--theme-text-2)
+
+  +mq-xl
+    fs: 26px
+
+
+.menu
+  +mq-till-lg
+    pos: absolute
+    w: 220px
+    h: calc( 100vh - 86px )
+    left: -100%
+    top: 86px
+    bg-color: var(--theme-accent-black)
+    tr: .5s
+
+    &.is-active
+      left: 0
+
+  +mq-lg
+    d: flex
+    ai: center
+    jc: space-between
+
+  &__
+    &dropwown-warpper
+      w: 100%
+      display: flex
+      mr: 25px
+      pa: 37px 28px
+      br-bottom: 2px solid rgba(255, 255, 255, .07)
+
+      +mq-lg
+        pa: 0px
+        w: auto
+        br: none
+
+      +mq-xl
+        mr: 35px
+
+
+    
+
+.dropdown
+  d: flex
+
+  &__
+    &left
+      d: flex
+      flex-direction: column
+    
+    &item
+      d: none
+      &--
+        &show
+          d: inline-block
+
+    &line
+      ma: 0 6px 0 11px
+      opacity: .3
+    
+    &right 
+      pa: 5px
+      mt: -6px
+      cursor: pointer
+
+    &trigger-wrapper 
+      w: 6px
+      h: 3px
+
+.menu-body
+  &__
+    &list
+      d: flex
+      flex-direction: column
+      ma: 40px 0 0 27px !important
+
+      +mq-lg
+        ai: center
+        flex-direction: row
+        ma: 0px !important
+      
+    &item
+      mb: 30px
+
+      +mq-lg
+        mb: 0px
+        mr: 20px
+
+        &:last-child
+          mr: 0px
+
+    &link
+      pos: relative
+      ft: uppercase
+      color: inherit
+      fw: 500
+      tr: .3s
+
+      &:after 
+        content: ""
+        pos: absolute
+        left: 0
+        bottom: -5px
+        w: 0px
+        h: 1px
+        bg-color: var(--theme-accent-green)
+        tr: .3s
+
+      &--
+        &active
+          color: var(--theme-text-2)
+      
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          color: var(--theme-text-2)
+
+          &::after
+            w: 100%
+      
+
+.search-wrapper
+  pos: relative
+  w: 11px
+  h: 11px
+  mr: 27px
+  cursor: pointer
+
+
+  +mq-xl
+    mr: 50px
+
+  &::before
+    content: ''
+    pos: absolute
+    w: 29px
+    h: 29px
+    br: 2px solid rgba(255, 255, 255, .4)
+    br-radius: 50%
+    top: -7px
+    left: -9px
+
+.cart
+  d: flex
+  ai: center
+  mr: 13px
+  cursor: pointer
+
+
+  +mq-xl
+    mr: 30px
+
+  &__
+    &counter
+      d: flex
+      ai: center
+      jc: center
+      w: 22px
+      h: 22px
+      bg-color: var(--theme-accent-dark)
+      br-radius: 50%
+      mr: -2px
+      z-index: 2
+    
+    &count
+      fw: 700
+    
+    &wrapper
+      w: 18px
+      h: 18px
+      z-index: 1
+
+.header-auth
+  d: flex
+  ai: center
+
+  &__
+    &icon-wrapper
+      w: 16px
+      h: 18px
+      cursor: pointer
+
+    &title
+      fw: 400
+      ft: uppercase
+      ml: 10px
+      d: none
+      cursor: pointer
+
+      +mq-lg
+        d: inline-block
+
+.menu-icon
+  pos: relative
+  d: block
+  w: 20px
+  h: 20px  
+  mr: 15px
+
+  +mq-lg
+    d: none
+
+  &.is-active
+    .menu-icon
+      &__
+        &line
+          trans: scale(0)
+
+          &--top
+            trans: rotate(-45deg)
+            top: 9px
+          
+          &--bottom
+            trans: rotate(45deg)
+            bottom: 8px
+
+
+  &__
+    &line
+      pos: absolute
+      w: 100%
+      h: 3px
+      bg-color: var(--theme-accent-white)
+      left: 0
+      tr: .3s
+      br-radius: 25%
+
+      &--top
+        top: 0
+
+      &--middle
+        top: 9px
+        
+      &--bottom
+        bottom: 0
