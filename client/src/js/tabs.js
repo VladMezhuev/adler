@@ -2,7 +2,7 @@
 
 export function changeImage() {
   const triggers = [...document.getElementsByClassName('js-category')]
-  const image = [...document.getElementsByClassName('js-image')][0]
+  const [image] = [...document.getElementsByClassName('js-image')]
   if (!triggers && !image) return
   triggers.forEach(trigger => {
     trigger.addEventListener('click', () => {

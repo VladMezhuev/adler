@@ -1,0 +1,27 @@
+.top-line
+  d: none
+  align-items: center
+  justify-content: center
+
+  +mq-lg
+    d: flex
+    mt: -120px
+
+  +mq-mac
+    mt: -145px
+
+  &__
+    &text
+      fw: 900
+      color: var(--theme-text-6)
+      ft: uppercase
+      white-space: nowrap
+
+      +mq-lg
+        fs: 150px
+      
+      +mq-xl
+        fs: 170px
+
+      +mq-mac
+        fs: 200px

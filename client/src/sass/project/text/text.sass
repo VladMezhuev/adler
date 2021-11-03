@@ -1,3 +1,75 @@
 a
   fd: none
   color: inherit
+
+.text
+  fs: 13px
+  fw: 300
+  lh: 24px
+  color: var(--theme-text-5)
+
+.title
+  fs: 22px
+  fw: 900
+  lh: 38px
+  color: var(--theme-text-12)
+  ft: uppercase
+
+  +mq-md
+    fs: 25px
+
+.subtitle
+  fs: 14px
+  fw: 700
+  lh: 38px
+  ft: uppercase
+  color: var(--theme-text-12)
+
+  +mq-lg
+    fs: 18px
+
+.required-text
+  fs: 11px
+  fw: 400
+  lh: 20px
+  ft: uppercase
+  color: var(--theme-text-10)
+  letter-spacing: 1.65px
+  mb: 10px
+
+.input, .textarea
+  br: none
+  outline: none
+  bg-color: var(--theme-accent-light-grey)
+  color: var(--theme-text-12)
+  fs: 11px
+  fw: 400
+
+  &::placeholder
+    opacity: .4
+    ft: uppercase
+    letter-spacing: 2.2px
+
+.input
+  pa: 15px 20px
+  w: 100%
+  h: 42px
+
+.btn
+  d: inline-flex
+  ai: center
+  jc: center
+  w: 100%
+  h: 42px
+  br: none
+  fs: 11px
+  ft: uppercase
+  fw: 400
+  cursor: pointer
+  bg-color: var(--theme-accent-green-light)
+  color: var(--theme-text-1)
+  tr: .3s
+
+  @media (hover: hover) and (pointer: fine)
+    &:hover
+      bg-color: var(--theme-accent-green)

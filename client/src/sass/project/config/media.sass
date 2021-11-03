@@ -1,10 +1,19 @@
 $mq-size-xl: 1122px !default
+$mq-size-mac: 1400px !default
 
 $mq-size-map: ('xl': $mq-size-xl)
+$mq-size-map: ('mac': $mq-size-mac)
 
 @mixin mq-xl
   @media (map-get($mq-queries-from-map, 'xl'))
     @content
 @mixin mq-till-xl
   @media (map-get($mq-queries-till-map, 'xl'))
+    @content
+
+@mixin mq-mac
+  @media (map-get($mq-queries-from-map, 'mac'))
+    @content
+@mixin mq-till-mac
+  @media (map-get($mq-queries-till-map, 'mac'))
     @content

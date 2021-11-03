@@ -1,0 +1,123 @@
+.text-page-wrapper
+  pb: 127px
+  
+.text-table
+  w: 100%
+  fs: 14px
+  color: var(--theme-text-12)
+
+  &__
+    &thead
+      fs: 11px
+      fw: 400
+      lh: 24px
+      ft: uppercase
+      color: var(--theme-text-10)
+    
+    &tr
+      d: flex
+      jc: space-between
+      ai: center
+      h: 55px
+      pa: 0px 22px
+
+      &--
+        &grey
+          bg-color: #f1f1f1
+
+    &th
+      w: 12%
+      &--
+        &large
+          w: 0%
+          +mq-lg
+            w: 40%
+    
+    &td
+      w: 12%
+      &--
+        &large
+          w: 0%
+          +mq-lg
+            w: 40%
+
+
+.text-page
+
+  &__
+    &description
+      color: var(--theme-text-5)
+      fs: 13px
+      fw: 700
+      mt: 35px
+
+    &subtitle
+      fw: 20px
+      fw: 900
+      color: var(--theme-text-12)
+      mt: 51px
+
+.text-wrapper
+  ma: 30px 0px
+
+.blockquote-wrapper
+  w: 100%
+  h: 164px
+  pa: 47px 92px 56px
+  bg-color: #f1f1f1
+  mb: 63px
+
+  &__
+    &blockquote
+      color: var(--theme-text-5)
+      fs: 13px
+      fw: 500
+      lh: 24px
+      ta: center
+      font-style: italic
+
+.list-wrapper
+  d: flex
+  jc: space-between
+  ma: 0px -10px
+
+  &__
+    &left-part, &right-part
+      w: 50%
+      pa: 0px 10px
+    
+    &item-wrapper 
+      d: flex
+      mb: 30px
+
+      &:last-child
+        mb: 0px
+    
+    &sign
+      &--
+        &number
+          color: var(--theme-text-2)
+          fs: 15px
+          fw: 900
+        
+        &circle
+          w: 6px
+          h: 6px
+          bg-color: var(--theme-accent-green-light)
+          br-radius: 50%
+
+    &item
+      pl: 40px
+      mt: -5px
+    
+
+.sm-title
+  fs: 15px
+  fw: 900
+  color: var(--theme-text-12)
+  mt: 60px
+
+.br
+  w: 100%
+  h: 4px
+  bg-color: #e2e2e2

@@ -1,16 +1,28 @@
 .header-wrapper
   z-index: 999
-  bg-color: var(--theme-accent-green-light)
   
+  &--
+    &main
+      bg-color: var(--theme-accent-green-light)
+
+      +mq-lg
+        bg-color: var(--theme-primary-black-tr)
+
+    &alt
+      bg-color: var(--theme-accent-green)
+      z-index: 2
+  
+      +mq-lg
+        bg-image: url('../img/main/alt-header.png')
+        background-position: bottom left
+
   +mq-till-lg
     pos: sticky
     top: 0
     left: 0
 
   +mq-lg
-    bg-color: var(--theme-primary-black-tr)
     position: relative
-
 
 .header
   d: flex
@@ -143,7 +155,7 @@
       ft: uppercase
       color: inherit
       fw: 500
-      tr: .3s
+      // tr: .3s
 
       &:after 
         content: ""
@@ -155,8 +167,8 @@
         bg-color: var(--theme-accent-green)
         tr: .3s
 
-      &--
-        &active
+      
+      &.is-active
           color: var(--theme-text-2)
       
       @media (hover: hover) and (pointer: fine)

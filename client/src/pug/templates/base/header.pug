@@ -1,6 +1,6 @@
 include ./../../mixins/index
 
-+b.header-wrapper.HEADER
++b(class=headerMain ? 'header-wrapper--main' : 'header-wrapper--alt').HEADER
   +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
     +b.header
       +e.left-part
@@ -9,7 +9,7 @@ include ./../../mixins/index
           +e.line.--middle.SPAN
           +e.line.--bottom.SPAN
 
-        +b.logo.--header.A(href="#") shop shop
+        +b.logo.--header.js-menu-link.A(href="../../../templates/index.html") shop shop
 
       +b.menu#js-menu.NAV
         +e.dropwown-warpper
@@ -21,7 +21,7 @@ include ./../../mixins/index
               +e.line.SPAN |
             +e.right 
               +e.trigger-wrapper 
-                +e.trigger-image.img.IMG(src='../static/img/common/dropdown-arrow.svg')
+                +e.trigger-image.img.IMG(src='../../../static/img/common/dropdown-arrow.svg')
           +b.dropdown
             +e.left
               +e.item.--show.SPAN UAN
@@ -30,32 +30,32 @@ include ./../../mixins/index
               +e.line.SPAN |
             +e.right 
               +e.trigger-wrapper 
-                +e.trigger-image.img.IMG(src='../static/img/common/dropdown-arrow.svg')
+                +e.trigger-image.img.IMG(src='../../../static/img/common/dropdown-arrow.svg')
         
         +b.menu-body
           +e.list.UL 
-            +e.item.js-menu-link.LI 
-              +e.link.A(href="#") Home
-            +e.item.js-menu-link.LI 
-              +e.link.--active.A(href="#") Catalog
-            +e.item.js-menu-link.LI 
-              +e.link.A(href="#") Payment and delivery
-            +e.item.js-menu-link.LI 
-              +e.link.A(href="#") Contacts
-            +e.item.js-menu-link.LI 
-              +e.link.A(href="#") About us
+            +e.item.LI 
+              +e.link.js-menu-link.A(href="../../../templates/index.html") Home
+            +e.item.LI 
+              +e.link.js-menu-link.A(href="#") Catalog
+            +e.item.LI 
+              +e.link.js-menu-link.A(href="../../../templates/pages/payment/payment.html") Payment and delivery
+            +e.item.LI 
+              +e.link.js-menu-link.A(href="../../../templates/pages/contacts/contacts.html") Contacts
+            +e.item.LI 
+              +e.link.js-menu-link.A(href="#") About us
 
       +e.right-part
-        +b.search-wrapper
-          +e.search-trigger.img.IMG(src='../static/img/header-footer/menu-search.svg')
+        +b.search-wrapper.modal-trigger(data-modal = 'login')
+          +e.search-trigger.img.IMG(src='../../../static/img/header-footer/menu-search.svg')
         
-        +b.cart 
+        +b.cart
           +e.counter 
             +e.count.SPAN 3
           +e.wrapper 
-            +e.image.img.IMG(src='../static/img/header-footer/menu-cart.svg')
+            +e.image.img.IMG(src='../../../static/img/header-footer/menu-cart.svg')
         
         +b.header-auth 
           +e.icon-wrapper 
-            +e.icon.img.IMG(src='../static/img/header-footer/menu-persone.svg')
-          +e.title.P login
+            +e.icon.img.IMG(src='../../../static/img/header-footer/menu-persone.svg')
+          +e.title.js-menu-link.A(href='../../../templates/pages/cabinet/cabinet.html') login

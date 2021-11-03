@@ -1,0 +1,120 @@
+.contact-form
+  d: flex
+  w: 100%
+  flex-direction: column
+
+  +mq-md
+    w: 50%
+
+  +mq-xl
+    w: 38.5%
+
+  &__
+    &star
+      color: var(--theme-text-11)
+
+    &input-wrapper
+      d: flex
+      flex-direction: column
+
+    &textarea
+      resize: none
+      w: 100%
+      h: 140px
+      pa: 15px
+      mb: 20px
+
+    &submit-wrapper
+      mt: 20px
+      d: flex
+      jc: space-between
+    
+    &submit
+      bg-color: var(--theme-accent-green-light)
+      color: var(--theme-text-1)
+      letter-spacing: 1.65px
+    
+    &left
+      w: 57%
+
+    &right
+      w: 43%
+      pl: 22px
+      align-self: flex-end
+
+.contact-info
+  mt: 20px
+  pa: 10px 0px
+
+  +mq-md
+    mt: 0px
+    ml: 40px
+
+  +mq-lg
+    ml: 85px
+  &__
+    &tel
+      fs: 28px
+      color: var(--theme-text-2)
+      fw: 400
+
+      +mq-xl
+        fs: 39px
+    
+    &adress, &mail
+      fs: 14px
+      fw: 300
+      color: var(--theme-text-3)
+
+      +mq-xl
+        fs: 16px
+
+    &adress
+      ft: uppercase
+      ma: 8px 0px 15px 0px
+
+      +mq-md
+        ma: 8px 0px 25px 0px
+
+.social
+  d: flex
+  mt: 20px
+
+  +mq-lg
+    mt: 50px
+  &__
+    &wrapper
+      d: flex
+      mr: 30px
+
+      &:last-child
+        mr: 0
+    
+    &name
+      fs: 13px
+      color: var(--theme-text-3)
+      fw: 300
+      ml: 10px
+
+
+.contact-map 
+  mt: 50px
+
+  +mq-lg
+    mt: -100px
+    clip-path: polygon(0 60%, 100% 0, 100% 100%, 0 100%)
+  
+  +mq-xl
+    mt: -210px
+    clip-path: polygon(0 74%, 100% 0, 100% 100%, 0 100%)
+  &__
+    &map
+      w: 100%
+      h: 465px
+      filter: grayscale(10)
+
+      +mq-lg
+        h: 665px
+      
+      .gmnoprint
+        d: none

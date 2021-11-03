@@ -1,0 +1,132 @@
+.cabinet-wrapper
+  pb: 154px
+
+  .breadcrumb
+    +mq-lg
+      mt: -25px
+  
+.cabinet
+  &__
+    &title
+      mt: 50px
+      ft: uppercase
+
+      +mq-md
+        mt: 0px
+
+.cabinen-tabs 
+  mt: 25px
+  &__
+    &element
+      ml: 15px
+
+      +mq-md
+        ml: 32px
+
+      &:first-child
+        ml: 0px
+
+      &.is-active
+        color: var(--theme-text-2)
+
+.cabinet-tab-content
+  mt: 57px
+
+  &__
+    &forms-wrapper
+      d: flex
+      flex-direction: column
+
+      +mq-md
+        flex-direction: row
+        jc: space-between
+
+    &left-part
+      w: 100%
+
+      +mq-md
+        w: 56%
+    
+    &right-part
+      w: 100%
+
+      +mq-md
+        w: 27%
+
+.cabinet-bio-form 
+  w: 100%
+  &__
+    &top, &bottom
+      d: flex
+      flex-direction: column
+
+      +mq-md
+        flex-direction: row
+        ma: 0 -10px
+
+    &top
+
+      +mq-md
+        mb: 30px
+
+    &input-wrapper, &submit-wrapper 
+      w: 100%
+
+      +mq-md
+        w: 50%
+        pa: 0 10px
+    
+    &submit-wrapper 
+      mt: 20px
+      align-self: flex-end
+
+      +mq-md
+        margin-top: 0
+
+    
+.password-form 
+  mt: 40px
+  w: 100%
+
+  +mq-md
+    mt: 0px
+
+  &__
+    &input-wrapper
+      mb: 30px
+
+  
+      &:nth-child(2)
+        mb: 40px
+
+.change-email-form
+  d: flex
+  flex-direction: column
+  ai: center
+  mt: 50px
+
+  +mq-md
+    flex-direction: row
+    ma: 40px -10px 0px
+
+
+  &__
+    &email-wrapper, &modal-trigger-wrapper
+      w: 100%
+
+      +mq-md
+        w: 50%
+        pa: 0px 10px
+
+    &email-wrapper
+      mb: 20px
+
+      +mq-md
+        mb: 0px
+
+    &email
+      w: 100%
+      color: var(--theme-text-12)
+      fs: 14px
+      fw: 700
+      

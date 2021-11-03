@@ -1,6 +1,8 @@
 extends ./base/base
 
 block header 
+  -
+    const headerMain = true
   include ./base/header
 block content 
   +b.main.MAIN
@@ -9,4 +11,47 @@ block content
     include ./components/main/clothes-tabs
     include ./components/main/sales
     include ./components/main/main-bottom
+
+    +b.modal#login
+     
+      +e.content
+        +e.modal-close.js-modal-close.IMG(src='../../../static/img/forms/close.png')
+        +e.top-line 
+          +e.title Sign in #[+e.line.SPAN /] #[+e.span.modal-trigger.SPAN(data-modal = 'logout') Create Account]
+        
+        +e.middle-line 
+          +b.sign-in-form.FORM 
+            +e.input-wrapper 
+              +e.required-text.required-text.SPAN your email #[+e.star.SPAN *]
+              +e.input.input.INPUT(type='email')
+            +e.input-wrapper 
+              +e.required-text.required-text.SPAN password #[+e.star.SPAN *]
+              +e.pass.js-pass-form.INPUT(type='password')
+              +e.toggle-wrapper.js-toggle-pass
+                +e.toggle-image.is-active.js-pass-open.IMG(src='../../../static/img/forms/eye.svg')
+                +e.toggle-image.js-pass-close.IMG(src='../../../static/img/forms/non-eye.svg')
+            +e.submit-wrapper
+              +e.submit.btn.BUTTON(type='submit') sign in
+            +e.forgot-wrapper
+              +e.forgot.P Forgot #[+e.forgot-span.SPAN Password]?
+        
+        +e.bottom-line 
+          +b.modal-social
+            +e.line-wrapper
+              +e.left-line 
+              +e.or.SPAN OR
+              +e.right-line
+            +e.btn-wrapper 
+              +e.btn.--blue.A(href='#')
+                +e.image.IMG(src='../../../static/img/forms/facebook.png')
+                +e.name.SPAN facebook
+              +e.btn.--red.A(href='#')
+                +e.image.IMG(src='../../../static/img/forms/google.png')
+                +e.name.SPAN google
+
+
+
+    +b.modal#logout
+      +e.content.--sm.P logout
+        +e.modal-close.js-modal-close.IMG(src='../../../static/img/forms/close.png')
 

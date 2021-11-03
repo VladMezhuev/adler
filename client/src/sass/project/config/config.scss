@@ -8,7 +8,8 @@ $theme-default: (
     dark: #262626,
     green: #12a791,
     green-light: #12d5b8,
-    grey: #ebebeb
+    grey: #ebebeb,
+    light-grey: #f6f6f6
   ),
   primary: (
     light: #ebebeb,
@@ -47,7 +48,10 @@ $theme-base: map-merge(
       6: #e6e6e6,
       7: #818181,
       8: #999999,
-      9: #ebebeb
+      9: #ebebeb,
+      10: #777777,
+      11: #f95e3a,
+      12: #242626,
     )
   )
 );

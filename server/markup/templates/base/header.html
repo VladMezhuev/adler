@@ -1,10 +1,10 @@
 
-<header class="header-wrapper">
+<header class="header-wrapper header-wrapper--alt">
   <div class="g-container g-container--fit_sm-sm g-container--fit_md-md g-container--fit_lg-lg g-container--fit_xl-xl">
     <div class="header">
       <div class="header__left-part">
         <div class="menu-icon" id="js-trigger"><span class="menu-icon__line menu-icon__line--top"></span><span class="menu-icon__line menu-icon__line--middle"></span><span class="menu-icon__line menu-icon__line--bottom"></span>
-        </div><a class="logo logo--header" href="#">shop shop</a>
+        </div><a class="logo logo--header js-menu-link" href="../../../templates/index.html">shop shop</a>
       </div>
       <nav class="menu" id="js-menu">
         <div class="menu__dropwown-warpper">
@@ -14,7 +14,7 @@
             <div class="dropdown__middle"> <span class="dropdown__line">|</span>
             </div>
             <div class="dropdown__right"> 
-              <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../static/img/common/dropdown-arrow.svg"/>
+              <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../../../static/img/common/dropdown-arrow.svg"/>
               </div>
             </div>
           </div>
@@ -24,40 +24,38 @@
             <div class="dropdown__middle"> <span class="dropdown__line">|</span>
             </div>
             <div class="dropdown__right"> 
-              <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../static/img/common/dropdown-arrow.svg"/>
+              <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../../../static/img/common/dropdown-arrow.svg"/>
               </div>
             </div>
           </div>
         </div>
         <div class="menu-body">
           <ul class="menu-body__list"> 
-            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Home</a>
+            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/index.html">Home</a>
             </li>
-            <li class="menu-body__item js-menu-link"> <a class="menu-body__link menu-body__link--active" href="#">Catalog</a>
+            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="#">Catalog</a>
             </li>
-            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Payment and delivery</a>
+            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/pages/payment/payment.html">Payment and delivery</a>
             </li>
-            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Contacts</a>
+            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/pages/contacts/contacts.html">Contacts</a>
             </li>
-            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">About us</a>
+            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="#">About us</a>
             </li>
           </ul>
         </div>
       </nav>
       <div class="header__right-part">
-        <div class="search-wrapper"><img class="search-wrapper__search-trigger img" src="../static/img/header-footer/menu-search.svg"/>
+        <div class="search-wrapper modal-trigger" data-modal="login"><img class="search-wrapper__search-trigger img" src="../../../static/img/header-footer/menu-search.svg"/>
         </div>
-        <div class="cart"> 
+        <div class="cart">
           <div class="cart__counter"> <span class="cart__count">3</span>
           </div>
-          <div class="cart__wrapper"> <img class="cart__image img" src="../static/img/header-footer/menu-cart.svg"/>
+          <div class="cart__wrapper"> <img class="cart__image img" src="../../../static/img/header-footer/menu-cart.svg"/>
           </div>
         </div>
         <div class="header-auth"> 
-          <div class="header-auth__icon-wrapper"> <img class="header-auth__icon img" src="../static/img/header-footer/menu-persone.svg"/>
-          </div>
-          <p class="header-auth__title">login
-          </p>
+          <div class="header-auth__icon-wrapper"> <img class="header-auth__icon img" src="../../../static/img/header-footer/menu-persone.svg"/>
+          </div><a class="header-auth__title js-menu-link" href="../../../templates/pages/cabinet/cabinet.html">login</a>
         </div>
       </div>
     </div>

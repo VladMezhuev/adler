@@ -1,0 +1,10 @@
+extends ../../base/base
+
+block header 
+  include ../../../mixins/top-line
+  include ../../base/header
+  +topLine
+block content 
+  +b.main.MAIN
+    include ../../../mixins/index
+    include ../../components/cabinet/cabinet

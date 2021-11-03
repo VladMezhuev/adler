@@ -1,0 +1,46 @@
+include ../../../mixins/breadcrumbs
+include ../../../mixins/index
+
++b.cabinet-wrapper.SECTION 
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +breadcrumb(['Home', 'Personal Area'])
+    +b.cabinet 
+      +e.title.title.H1 Personal Area
+      +b.cabinen-tabs 
+        +e.element.subtitle.is-active.A(href='#') Personal data
+        +e.element.subtitle.A(href='#') History of orders
+      +b.cabinet-tab-content.--data
+        +e.forms-wrapper 
+          +e.left-part 
+            +b.cabinet-bio-form 
+              +e.top 
+                +e.input-wrapper 
+                  +e.required.required-text.P FIRST NAME
+                  +e.input.input.INPUT(type='text' name='cabinet-first-name')
+                +e.input-wrapper 
+                  +e.required.required-text.P LAST NAME
+                  +e.input.input.INPUT(type='text' name='cabinet-last-name')
+              +e.bottom
+                +e.input-wrapper 
+                  +e.required.required-text.P PHONE
+                  +e.input.input.INPUT(type='tel' name='cabinet-phone')
+                +e.submit-wrapper 
+                  +e.submit.btn.BUTTON(type='submit') save
+            +b.change-email-form
+              +e.email-wrapper
+                +e.email.SPAN stass3939@gmail.com
+              +e.modal-trigger-wrapper
+                +e.modal-trigger.btn.A(fref='#') Change email
+
+
+          +e.right-part
+            +b.password-form.FORM
+              +e.input-wrapper 
+                +e.required.required-text.P PASSWORD
+                +e.input.input.INPUT(type='password' name='cabinet-pass')
+              +e.input-wrapper 
+                +e.required.required-text.P repeat password
+                +e.input.input.INPUT(type='password' name='cabinet-rep-pass')
+              +e.submit-wrapper 
+                +e.submit.btn.BUTTON(type='submit') save
+          

@@ -3,8 +3,11 @@
 import menu from './menu';
 import slider from './slider';
 import { changeImage } from './tabs';
-import scroll from './scroll'
+import { scrollTo } from './scroll'
+import map from './map'
+import './modal'
 
 document.addEventListener('DOMContentLoaded', () => {
+  scrollTo()
   changeImage()
 })

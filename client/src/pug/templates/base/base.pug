@@ -11,23 +11,15 @@ html(lang='ru')
       rel="stylesheet",
       type="text/css",
       media="all",
-      href='../static/css/style.css'
+      href='/static/css/style.css'
     )
-    //- link(
-    //-   rel="icon",
-    //-   href='../static/img/favicon.png',
-    //-   type="image/x-icon"
-    //- )
   body
     #app
       block header
         //- include ./header
       block content
-      //-   include ./bio
-      //- block photos
-      //-   include ./photos
       block footer
         include ./footer
-
-    script(type="text/javascript", src='../static/js/vendor.js')
-    script(type="text/javascript", src='../static/js/main.js')
+    script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAq4JCX3T23IUj32KRtJsrC5xzN0YDy7zM&callback=initMap')
+    script(type="text/javascript", src='/static/js/vendor.js')
+    script(type="text/javascript", src='/static/js/main.js')

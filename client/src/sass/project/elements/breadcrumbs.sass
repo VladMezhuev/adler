@@ -1,0 +1,32 @@
+.breadcrumb
+  mt: 20px
+  color: var(--theme-text-3)
+  fs: 12px
+  fw: 400
+  justify-self: flex-start
+
+  +mq-lg
+      mt: -58px
+      mb: 35px
+
+  &__
+    &list
+      d: flex
+    &item
+      d: inline-block
+    
+      &:not(:last-child):after
+        content: '/'
+        ma: 0px 17px 0px 12px
+        fw: 900
+        color: var(--theme-text-2)
+
+    &link
+      tr: .2s
+      @media (hover: hover) and (pointer: fine)
+        &:hover
+          color: var(--theme-text-2)
+          td: underline
+
+
+  

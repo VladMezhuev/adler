@@ -1,0 +1,43 @@
+include ../../../mixins/breadcrumbs
+include ../../../mixins/index
+
++b.contacts-wrapper.SECTION 
+  +b.g-container--fit_sm-sm.--fit_md-md.--fit_lg-lg.--fit_xl-xl
+    +breadcrumb(['Home', 'Contact'])
+    +b.contact
+      +e.title.H2 CONTACT
+      +e.form-wrapper 
+        +b.contact-form.FORM 
+          +e.input-wrapper
+            +e.required-text.required-text.SPAN your message #[+e.star.SPAN *]
+            +e.textarea.textarea.TEXTAREA(placeholder='INPUT YOUR MESSAGE HERE')
+          +e.input-wrapper
+            +e.required-text.required-text.SPAN your email #[+e.star.SPAN *]
+            +e.input.input.INPUT(type='email' placeholder='INPUT YOUR EMAIL')
+          +e.submit-wrapper
+            +e.left
+              +e.input-wrapper
+                +e.required-text.required-text.SPAN your name #[+e.star.SPAN *]
+                +e.input.input.INPUT(type='text' placeholder='YOUR NAME')
+            +e.right 
+              +e.submit.btn.BUTTON(type='submit') send
+
+        +b.contact-info
+          +e.info
+            +e.tel.A(href='tel:+380501579581 ') + 38 050 157-95-81 
+            +e.adress.P PRAVDA 80A, BERDYANSK
+            +e.mail.A(href='mailto:info@gmail.com') info@gmail.com
+          +b.social
+            +e.wrapper.A(href='#')
+              +e.icon.IMG(src='../../../static/img/contacts/social/social-1.svg')
+              +e.name.SPAN vkontakte
+            +e.wrapper.A(href='#')
+              +e.icon.IMG(src='../../../static/img/contacts/social/social-2.svg')
+              +e.name.SPAN facebook
+            +e.wrapper.A(href='#')
+              +e.icon.IMG(src='../../../static/img/contacts/social/social-3.svg')
+              +e.name.SPAN twitter
+      
+  +b.contact-map 
+    +e.map#contact-map
+

@@ -1,0 +1,11 @@
+mixin breadcrumb(items = [])
+  -
+    const lastEl = items[items.length - 1]
+  +b.breadcrumb
+    +e.list.UL
+      each item in items
+        +e.item.LI
+          if (items.length === 1 || item === lastEl)
+              +e.link.SPAN= item
+          else
+            +e.link.A(href='#')= item

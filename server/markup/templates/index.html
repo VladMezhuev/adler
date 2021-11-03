@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1, user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#8F67A4">
-    <link rel="stylesheet" type="text/css" media="all" href="../static/css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/static/css/style.css">
   </head>
   <body>
     <div id="app">
-                        <header class="header-wrapper">
+                        <header class="header-wrapper header-wrapper--main">
                                             <div class="g-container g-container--fit_sm-sm g-container--fit_md-md g-container--fit_lg-lg g-container--fit_xl-xl">
                                                                 <div class="header">
                                                                                           <div class="header__left-part">
                                                                                                               <div class="menu-icon" id="js-trigger"><span class="menu-icon__line menu-icon__line--top"></span><span class="menu-icon__line menu-icon__line--middle"></span><span class="menu-icon__line menu-icon__line--bottom"></span>
-                                                                                                              </div><a class="logo logo--header" href="#">shop shop</a>
+                                                                                                              </div><a class="logo logo--header js-menu-link" href="../../../templates/index.html">shop shop</a>
                                                                                           </div>
                                                                                     <nav class="menu" id="js-menu">
                                                                                                               <div class="menu__dropwown-warpper">
@@ -24,7 +24,7 @@
                                                                                                                                                             <div class="dropdown__middle"> <span class="dropdown__line">|</span>
                                                                                                                                                             </div>
                                                                                                                                                             <div class="dropdown__right"> 
-                                                                                                                                                                                      <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../static/img/common/dropdown-arrow.svg"/>
+                                                                                                                                                                                      <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../../../static/img/common/dropdown-arrow.svg"/>
                                                                                                                                                                                       </div>
                                                                                                                                                             </div>
                                                                                                                                   </div>
@@ -34,40 +34,38 @@
                                                                                                                                                             <div class="dropdown__middle"> <span class="dropdown__line">|</span>
                                                                                                                                                             </div>
                                                                                                                                                             <div class="dropdown__right"> 
-                                                                                                                                                                                      <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../static/img/common/dropdown-arrow.svg"/>
+                                                                                                                                                                                      <div class="dropdown__trigger-wrapper"> <img class="dropdown__trigger-image img" src="../../../static/img/common/dropdown-arrow.svg"/>
                                                                                                                                                                                       </div>
                                                                                                                                                             </div>
                                                                                                                                   </div>
                                                                                                               </div>
                                                                                                         <div class="menu-body">
                                                                                                                                   <ul class="menu-body__list"> 
-                                                                                                                                                            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Home</a>
+                                                                                                                                                            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/index.html">Home</a>
                                                                                                                                                             </li>
-                                                                                                                                                            <li class="menu-body__item js-menu-link"> <a class="menu-body__link menu-body__link--active" href="#">Catalog</a>
+                                                                                                                                                            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="#">Catalog</a>
                                                                                                                                                             </li>
-                                                                                                                                                            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Payment and delivery</a>
+                                                                                                                                                            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/pages/payment/payment.html">Payment and delivery</a>
                                                                                                                                                             </li>
-                                                                                                                                                            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Contacts</a>
+                                                                                                                                                            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="../../../templates/pages/contacts/contacts.html">Contacts</a>
                                                                                                                                                             </li>
-                                                                                                                                                            <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">About us</a>
+                                                                                                                                                            <li class="menu-body__item"> <a class="menu-body__link js-menu-link" href="#">About us</a>
                                                                                                                                                             </li>
                                                                                                                                   </ul>
                                                                                                         </div>
                                                                                     </nav>
                                                                                           <div class="header__right-part">
-                                                                                                              <div class="search-wrapper"><img class="search-wrapper__search-trigger img" src="../static/img/header-footer/menu-search.svg"/>
+                                                                                                              <div class="search-wrapper modal-trigger" data-modal="login"><img class="search-wrapper__search-trigger img" src="../../../static/img/header-footer/menu-search.svg"/>
                                                                                                               </div>
-                                                                                                              <div class="cart"> 
+                                                                                                              <div class="cart">
                                                                                                                                         <div class="cart__counter"> <span class="cart__count">3</span>
                                                                                                                                         </div>
-                                                                                                                                        <div class="cart__wrapper"> <img class="cart__image img" src="../static/img/header-footer/menu-cart.svg"/>
+                                                                                                                                        <div class="cart__wrapper"> <img class="cart__image img" src="../../../static/img/header-footer/menu-cart.svg"/>
                                                                                                                                         </div>
                                                                                                               </div>
                                                                                                               <div class="header-auth"> 
-                                                                                                                                        <div class="header-auth__icon-wrapper"> <img class="header-auth__icon img" src="../static/img/header-footer/menu-persone.svg"/>
-                                                                                                                                        </div>
-                                                                                                                                        <p class="header-auth__title">login
-                                                                                                                                        </p>
+                                                                                                                                        <div class="header-auth__icon-wrapper"> <img class="header-auth__icon img" src="../../../static/img/header-footer/menu-persone.svg"/>
+                                                                                                                                        </div><a class="header-auth__title js-menu-link" href="../../../templates/pages/cabinet/cabinet.html">login</a>
                                                                                                               </div>
                                                                                           </div>
                                                                 </div>
@@ -130,7 +128,7 @@
                                       </div>
                                     </div>
                                   </div>
-                                </div><a class="abs-circle" href="#sales"><span class="abs-circle__image-wrapper"><img class="abs-circle__image" src="../static/img/abs/arrow.svg"/></span></a>
+                                </div><a class="abs-circle js-scroll" href="#sales"><span class="abs-circle__image-wrapper"><img class="abs-circle__image" src="../static/img/abs/arrow.svg"/></span></a>
                               </div>
                             </div>
                           </div>
@@ -308,14 +306,56 @@
                               </div>
                             </div>
                           </div>
+                          <div class="modal" id="login">
+                            <div class="modal__content"><img class="modal__modal-close js-modal-close" src="../../../static/img/forms/close.png"/>
+                              <div class="modal__top-line"> 
+                                <div class="modal__title">Sign in <span class="modal__line">/</span> <span class="modal__span modal-trigger" data-modal="logout">Create Account</span>
+                                </div>
+                              </div>
+                              <div class="modal__middle-line"> 
+                                <form class="sign-in-form"> 
+                                  <div class="sign-in-form__input-wrapper"> <span class="sign-in-form__required-text required-text">your email <span class="sign-in-form__star">*</span></span><input class="sign-in-form__input input" type="email"/>
+                                  </div>
+                                  <div class="sign-in-form__input-wrapper"> <span class="sign-in-form__required-text required-text">password <span class="sign-in-form__star">*</span></span><input class="sign-in-form__pass js-pass-form" type="password"/>
+                                    <div class="sign-in-form__toggle-wrapper js-toggle-pass"><img class="sign-in-form__toggle-image is-active js-pass-open" src="../../../static/img/forms/eye.svg"/><img class="sign-in-form__toggle-image js-pass-close" src="../../../static/img/forms/non-eye.svg"/>
+                                    </div>
+                                  </div>
+                                  <div class="sign-in-form__submit-wrapper">
+                                    <button class="sign-in-form__submit btn" type="submit">sign in
+                                    </button>
+                                  </div>
+                                  <div class="sign-in-form__forgot-wrapper">
+                                    <p class="sign-in-form__forgot">Forgot <span class="sign-in-form__forgot-span">Password</span>?
+                                    </p>
+                                  </div>
+                                </form>
+                              </div>
+                              <div class="modal__bottom-line"> 
+                                <div class="modal-social">
+                                  <div class="modal-social__line-wrapper">
+                                    <div class="modal-social__left-line"> 
+                                    </div><span class="modal-social__or">OR</span>
+                                    <div class="modal-social__right-line">
+                                    </div>
+                                  </div>
+                                  <div class="modal-social__btn-wrapper"> <a class="modal-social__btn modal-social__btn--blue" href="#"><img class="modal-social__image" src="../../../static/img/forms/facebook.png"/><span class="modal-social__name">facebook</span></a><a class="modal-social__btn modal-social__btn--red" href="#"><img class="modal-social__image" src="../../../static/img/forms/google.png"/><span class="modal-social__name">google</span></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal" id="logout">
+                            <p class="modal__content modal__content--sm">logout<img class="modal__modal-close js-modal-close" src="../../../static/img/forms/close.png"/>
+                            </p>
+                          </div>
                         </main>
                         <footer class="footer-wrapper">
                                             <div class="g-container g-container--fit_sm-sm g-container--fit_md-md g-container--fit_lg-lg g-container--fit_xl-xl">
                                                                 <div class="footer"> 
                                                                                           <div class="footer__top-row">
-                                                                                                                    <div class="footer__top"><a class="logo logo--footer" href="#">shop shop</a>
+                                                                                                                    <div class="footer__top"><a class="logo logo--footer" href="../../../templates/index.html">shop shop</a>
                                                                                                                     </div>
-                                                                                                                    <div class="footer__info"> <a class="tel-wrapper" href="tel:+380501579581"><span class="tel-wrapper__image-wrapper"><img class="tel-wrapper__image" src="../static/img/header-footer/footer-phone.png"/></span><span class="tel-wrapper__tel">+ 38 050 157-95-81 </span></a><a class="footer__mail" href="mailto:info@gmail.com">info@gmail.com</a>
+                                                                                                                    <div class="footer__info"> <a class="tel-wrapper" href="tel:+380501579581"><span class="tel-wrapper__image-wrapper"><img class="tel-wrapper__image" src="../../../static/img/header-footer/footer-phone.png"/></span><span class="tel-wrapper__tel">+ 38 050 157-95-81 </span></a><a class="footer__mail" href="mailto:info@gmail.com">info@gmail.com</a>
                                                                                                                     </div>
                                                                                           </div>
                                                                                           <div class="footer__bottom-row">
@@ -323,26 +363,27 @@
                                                                                                                     </p>
                                                                                                               <div class="menu-body">
                                                                                                                                         <ul class="menu-body__list"> 
-                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Home</a>
+                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="../../../templates/index.html">Home</a>
                                                                                                                                                                   </li>
                                                                                                                                                                   <li class="menu-body__item js-menu-link"> <a class="menu-body__link menu-body__link--active" href="#">Catalog</a>
                                                                                                                                                                   </li>
-                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Payment and delivery</a>
+                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="../../../templates/pages/payment/payment.html">Payment and delivery</a>
                                                                                                                                                                   </li>
-                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">Contacts</a>
+                                                                                                                                                                  <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="../../../templates/pages/contacts/contacts.html">Contacts</a>
                                                                                                                                                                   </li>
                                                                                                                                                                   <li class="menu-body__item js-menu-link"> <a class="menu-body__link" href="#">About us</a>
                                                                                                                                                                   </li>
                                                                                                                                         </ul>
-                                                                                                              </div><a class="footer__search-wrapper" href="#"><img class="footer__search" src="../static/img/header-footer/menu-search.svg"/></a>
+                                                                                                              </div><a class="footer__search-wrapper" href="#"><img class="footer__search" src="../../../static/img/header-footer/menu-search.svg"/></a>
                                                                                           </div>
-                                                                                          <div class="footer__abs-wrapper"> <img class="footer__abs-image img" src="../static/img/abs/abs-lines.png"/>
+                                                                                          <div class="footer__abs-wrapper"> <img class="footer__abs-image img" src="../../../static/img/abs/abs-lines.png"/>
                                                                                           </div>
                                                                 </div>
                                             </div>
                         </footer>
     </div>
-    <script type="text/javascript" src="../static/js/vendor.js"></script>
-    <script type="text/javascript" src="../static/js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq4JCX3T23IUj32KRtJsrC5xzN0YDy7zM&amp;callback=initMap"></script>
+    <script type="text/javascript" src="/static/js/vendor.js"></script>
+    <script type="text/javascript" src="/static/js/main.js"></script>
   </body>
 </html>

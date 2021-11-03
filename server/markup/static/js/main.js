@@ -1,19 +1,16 @@
 webpackJsonp([0],[
 /* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var arrayWithoutHoles = __webpack_require__(14);
+var arrayWithoutHoles = __webpack_require__(15);
 
-var iterableToArray = __webpack_require__(15);
+var iterableToArray = __webpack_require__(16);
 
-var unsupportedIterableToArray = __webpack_require__(16);
+var unsupportedIterableToArray = __webpack_require__(6);
 
 var nonIterableSpread = __webpack_require__(17);
 
@@ -25,6 +22,9 @@ module.exports = _toConsumableArray;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
+/* 2 */,
+/* 3 */,
+/* 4 */,
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -49,11 +49,32 @@ module.exports["default"] = module.exports, module.exports.__esModule = true;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+var arrayLikeToArray = __webpack_require__(5);
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
+}
+
+module.exports = _unsupportedIterableToArray;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
 
 var _interopRequireDefault = __webpack_require__(0);
 
-var _typeof2 = _interopRequireDefault(__webpack_require__(2));
+var _typeof2 = _interopRequireDefault(__webpack_require__(3));
 
 (function (global, factory) {
   "use strict";
@@ -7758,36 +7779,15 @@ var _typeof2 = _interopRequireDefault(__webpack_require__(2));
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)(module)))
 
 /***/ }),
-/* 7 */,
 /* 8 */,
 /* 9 */,
 /* 10 */,
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(12);
-
-
-/***/ }),
+/* 11 */,
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+module.exports = __webpack_require__(13);
 
-
-var _interopRequireDefault = __webpack_require__(0);
-
-var _menu = _interopRequireDefault(__webpack_require__(13));
-
-var _slider = _interopRequireDefault(__webpack_require__(18));
-
-var _tabs = __webpack_require__(21);
-
-var _scroll = _interopRequireDefault(__webpack_require__(22));
-
-document.addEventListener('DOMContentLoaded', function () {
-  (0, _tabs.changeImage)();
-});
 
 /***/ }),
 /* 13 */
@@ -7798,7 +7798,33 @@ document.addEventListener('DOMContentLoaded', function () {
 
 var _interopRequireDefault = __webpack_require__(0);
 
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(4));
+var _menu = _interopRequireDefault(__webpack_require__(14));
+
+var _slider = _interopRequireDefault(__webpack_require__(18));
+
+var _tabs = __webpack_require__(21);
+
+var _scroll = __webpack_require__(22);
+
+var _map = _interopRequireDefault(__webpack_require__(23));
+
+__webpack_require__(31);
+
+document.addEventListener('DOMContentLoaded', function () {
+  (0, _scroll.scrollTo)();
+  (0, _tabs.changeImage)();
+});
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(1));
 
 var iconMenu = document.getElementById('js-trigger');
 var menu = document.getElementById('js-menu');
@@ -7816,7 +7842,17 @@ function closeMenu() {
 
 iconMenu.addEventListener('click', toggleMenu);
 menuLinks.forEach(function (el) {
-  el.addEventListener('click', closeMenu);
+  if (el.href === document.location.href) {
+    el.classList.add('is-active');
+    el.style.cursor = 'default';
+  }
+
+  el.addEventListener('click', function (e) {
+    if (document.location.href.includes(e.target.pathname)) {
+      e.preventDefault();
+      closeMenu();
+    }
+  });
 });
 document.addEventListener('scroll', closeMenu);
 document.addEventListener('click', function (e) {
@@ -7826,7 +7862,7 @@ document.addEventListener('click', function (e) {
 });
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7842,7 +7878,7 @@ module.exports = _arrayWithoutHoles;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7853,27 +7889,6 @@ function _iterableToArray(iter) {
 }
 
 module.exports = _iterableToArray;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var arrayLikeToArray = __webpack_require__(5);
-
-function _unsupportedIterableToArray(o, minLen) {
-  if (!o) return;
-  if (typeof o === "string") return arrayLikeToArray(o, minLen);
-  var n = Object.prototype.toString.call(o).slice(8, -1);
-  if (n === "Object" && o.constructor) n = o.constructor.name;
-  if (n === "Map" || n === "Set") return Array.from(o);
-  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return arrayLikeToArray(o, minLen);
-}
-
-module.exports = _unsupportedIterableToArray;
 module.exports["default"] = module.exports, module.exports.__esModule = true;
 
 /***/ }),
@@ -7901,7 +7916,7 @@ var _interopRequireDefault = __webpack_require__(0);
 
 var _slickCarousel = _interopRequireDefault(__webpack_require__(19));
 
-var _jquery = _interopRequireDefault(__webpack_require__(6));
+var _jquery = _interopRequireDefault(__webpack_require__(7));
 
 var topSliderConfig = {
   arrows: false,
@@ -7985,7 +8000,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 var _interopRequireDefault = __webpack_require__(0);
 
-var _typeof2 = _interopRequireDefault(__webpack_require__(2));
+var _typeof2 = _interopRequireDefault(__webpack_require__(3));
 
 ;
 
@@ -7993,7 +8008,7 @@ var _typeof2 = _interopRequireDefault(__webpack_require__(2));
   'use strict';
 
   if (true) {
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(6)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(7)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -10672,11 +10687,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.changeImage = changeImage;
 
-var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(4));
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(1));
 
 function changeImage() {
   var triggers = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-category'));
-  var image = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-image'))[0];
+
+  var _ref = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-image')),
+      image = _ref[0];
+
   if (!triggers && !image) return;
   triggers.forEach(function (trigger) {
     trigger.addEventListener('click', function () {
@@ -10699,18 +10717,322 @@ function changeImage() {
 "use strict";
 
 
-var smoothLinks = document.querySelectorAll('a[href^="#"]');
-smoothLinks.forEach(function (smoothLink) {
-  smoothLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    var id = smoothLink.getAttribute('href');
-    document.querySelector(id).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+var _interopRequireDefault = __webpack_require__(0);
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.scrollTo = scrollTo;
+
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(1));
+
+function scrollTo() {
+  var smoothLinks = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-scroll'));
+  if (!smoothLinks) return;
+  smoothLinks.forEach(function (smoothLink) {
+    smoothLink.addEventListener('click', function (e) {
+      e.preventDefault();
+      var id = smoothLink.getAttribute('href');
+      document.querySelector(id).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+  });
+}
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(24));
+
+var _construct2 = _interopRequireDefault(__webpack_require__(28));
+
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(1));
+
+var maps = [{
+  el: 'contact-map',
+  center: [47.4752108, 7.7419468],
+  markers: [[{
+    lat: 47.4746108,
+    lng: 7.7419468
+  }]]
+}];
+
+function initMap(_ref) {
+  var el = _ref.el,
+      center = _ref.center,
+      markers = _ref.markers;
+  var elem = document.getElementById(el);
+
+  if (elem) {
+    var map = new google.maps.Map(elem, {
+      center: (0, _construct2["default"])(google.maps.LatLng, (0, _toConsumableArray2["default"])(center)),
+      zoom: 18
+    });
+    markers.forEach(function (_ref2) {
+      var _ref3 = (0, _slicedToArray2["default"])(_ref2, 1),
+          position = _ref3[0];
+
+      var marker = new google.maps.Marker({
+        position: position,
+        map: map,
+        optimized: false
+      });
+    });
+  }
+}
+
+maps.forEach(initMap);
+window.initMap = initMap;
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var arrayWithHoles = __webpack_require__(25);
+
+var iterableToArrayLimit = __webpack_require__(26);
+
+var unsupportedIterableToArray = __webpack_require__(6);
+
+var nonIterableRest = __webpack_require__(27);
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || unsupportedIterableToArray(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _iterableToArrayLimit(arr, i) {
+  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
+
+  if (_i == null) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+
+  var _s, _e;
+
+  try {
+    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+module.exports = _nonIterableRest;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var setPrototypeOf = __webpack_require__(29);
+
+var isNativeReflectConstruct = __webpack_require__(30);
+
+function _construct(Parent, args, Class) {
+  if (isNativeReflectConstruct()) {
+    module.exports = _construct = Reflect.construct;
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  } else {
+    module.exports = _construct = function _construct(Parent, args, Class) {
+      var a = [null];
+      a.push.apply(a, args);
+      var Constructor = Function.bind.apply(Parent, a);
+      var instance = new Constructor();
+      if (Class) setPrototypeOf(instance, Class.prototype);
+      return instance;
+    };
+
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+  }
+
+  return _construct.apply(null, arguments);
+}
+
+module.exports = _construct;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _setPrototypeOf(o, p) {
+  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  module.exports["default"] = module.exports, module.exports.__esModule = true;
+  return _setPrototypeOf(o, p);
+}
+
+module.exports = _setPrototypeOf;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+function _isNativeReflectConstruct() {
+  if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+  if (Reflect.construct.sham) return false;
+  if (typeof Proxy === "function") return true;
+
+  try {
+    Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+module.exports = _isNativeReflectConstruct;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(0);
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(24));
+
+var _toConsumableArray2 = _interopRequireDefault(__webpack_require__(1));
+
+var modalTriger = (0, _toConsumableArray2["default"])(document.getElementsByClassName('modal-trigger'));
+var modals = (0, _toConsumableArray2["default"])(document.getElementsByClassName('modal'));
+var modalClose = (0, _toConsumableArray2["default"])(document.getElementsByClassName('js-modal-close'));
+
+function openModal(modal) {
+  modal.classList.add('is-active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(modal) {
+  modal.classList.remove('is-active');
+  document.body.style.overflow = 'auto';
+}
+
+modalTriger.forEach(function (trigger) {
+  trigger.addEventListener('click', function (e) {
+    if (e.path.includes(trigger)) {
+      modals.forEach(function (modal) {
+        if (modal.id === trigger.dataset.modal) {
+          openModal(modal);
+        }
+      });
+    }
+  });
+});
+modalClose.forEach(function (closeBtn) {
+  closeBtn.addEventListener('click', function () {
+    modals.forEach(function (modal) {
+      closeModal(modal);
     });
   });
 });
 
+var _document$getElements = document.getElementsByClassName('js-pass-form'),
+    _document$getElements2 = (0, _slicedToArray2["default"])(_document$getElements, 1),
+    passForm = _document$getElements2[0];
+
+var _document$getElements3 = document.getElementsByClassName('js-toggle-pass'),
+    _document$getElements4 = (0, _slicedToArray2["default"])(_document$getElements3, 1),
+    passFormToggle = _document$getElements4[0];
+
+var _document$getElements5 = document.getElementsByClassName('js-pass-open'),
+    _document$getElements6 = (0, _slicedToArray2["default"])(_document$getElements5, 1),
+    openImage = _document$getElements6[0];
+
+var _document$getElements7 = document.getElementsByClassName('js-pass-close'),
+    _document$getElements8 = (0, _slicedToArray2["default"])(_document$getElements7, 1),
+    closeImage = _document$getElements8[0];
+
+passFormToggle.addEventListener('click', function () {
+  if (passForm.type === 'password') {
+    passForm.type = 'text';
+    openImage.classList.remove('is-active');
+    closeImage.classList.add('is-active');
+  } else {
+    passForm.type = 'password';
+    openImage.classList.add('is-active');
+    closeImage.classList.remove('is-active');
+  }
+});
+
 /***/ })
-],[11]);
+],[12]);
 //# sourceMappingURL=main.js.map

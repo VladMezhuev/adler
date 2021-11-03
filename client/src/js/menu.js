@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-param-reassign */
+
 const iconMenu = document.getElementById('js-trigger')
 const menu = document.getElementById('js-menu')
 const menuLinks = [...document.getElementsByClassName('js-menu-link')]
@@ -15,7 +18,16 @@ function closeMenu() {
 iconMenu.addEventListener('click', toggleMenu)
 
 menuLinks.forEach(el => {
-  el.addEventListener('click', closeMenu)
+  if (el.href === document.location.href) {
+    el.classList.add('is-active')
+    el.style.cursor = 'default'
+  }
+  el.addEventListener('click', e => {
+    if (document.location.href.includes(e.target.pathname)) {
+      e.preventDefault();
+      closeMenu()
+    }
+  })
 })
 
 document.addEventListener('scroll', closeMenu)

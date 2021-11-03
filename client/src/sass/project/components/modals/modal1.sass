@@ -1,0 +1,175 @@
+.modal
+  pos: absolute
+  z-index: 10
+  top: 50%
+  left: 50%
+  w: 100%
+  h: 100vh
+  bg-color: rgba(0, 0, 0, .7)
+  d: none
+  ai: center
+  jc: center
+  br: 1px solid black
+  trans: translate(-50%, -50%)
+  color: black
+
+  &.is-active
+    pa: 17px
+    d: flex
+
+  &__
+    &content
+      pos: relative
+      w: 431px
+      h: 560px
+      bg-color: var(--theme-accent-white)
+      pa: 40px 70px 43px 60px
+      d: flex
+      flex-direction: column
+      ai: center
+
+      &--
+        &sm
+          w: 431px
+          h: 345px
+    
+    &modal-close
+      pos: absolute
+      top: 30px
+      right: 30px
+      cursor: pointer
+
+    &top-line, &middle-line, &bottom-line 
+      w: 100%
+
+    &top-line
+      mb: 53px
+    
+    &bottom-line
+      mt: 33px
+    
+    &title
+      fs: 30px
+      fw: 900
+      ft: uppercase
+      color: var(--theme-text-12)
+    
+    &line
+      fw: 300
+      color: var(--theme-text-2)
+    
+    &span
+      fs: 18px
+      fw: 400
+      ft: capitalize
+      color: var(--theme-text-2)
+      cursor: pointer
+
+.modal-social
+  &__
+    &line-wrapper
+      d: flex
+      ai: center
+      jc: space-between
+    
+    &left-line, &right-line
+      w: 120px
+      h: 1px
+      bg-color: #dddddd
+    
+    &or
+      fs: 12px
+      fw: 400
+      color: var(--theme-text-10)
+      ft: uppercase
+
+    &btn-wrapper 
+      d: flex
+      ai: center
+      jc: space-between
+      mt: 17px
+    
+    &btn
+      d: inline-flex
+      ai: center
+      jc: center
+      w: 130px
+      h: 42px
+
+      &--
+        &blue
+          bg-color: #4064ac
+        
+        &red
+          bg-color: #d14836
+    
+    &image
+      mr: 10px
+    
+    &name
+      fs: 10px
+      fw: 700
+      ft: uppercase
+      letter-spacing: 2px
+      color: var(--theme-text-1)
+
+    
+    
+.sign-in-form
+  &__
+    &input-wrapper
+      pos: relative
+      mb: 20px
+
+      &:nth-child(2)
+        mb: 34px
+
+
+    &required-text
+      d: block
+      mb: 13px
+    
+    &star
+      color: #f95e3a
+    
+    &input
+      ft: uppercase
+
+    &pass
+      w: 100%
+      h: 42px
+      bg-color: var(--theme-accent-white)
+      outline: none
+      pa: 18px
+      br: 1px solid #bde5dc
+      box-shadow: -2px 1px 5px #efefef
+      fs: 25px
+      fw: 400
+      color: var(--theme-text-12)
+      letter-spacing: 5px
+    
+    &toggle-wrapper
+      pos: absolute
+      bottom: 0px
+      right: 0px
+      // w: 35px
+      // h: 28px
+      cursor: pointer
+      pa: 10px
+    
+    &toggle-image
+      display: none
+      &.is-active
+        d: inline-block
+
+    &forgot-wrapper
+      mt: 15px
+    
+    &forgot
+      fs: 12px
+      fw: 400
+      font-style: italic
+      color: var(--theme-text-10)
+      ta: center
+        
+

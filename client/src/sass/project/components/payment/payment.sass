@@ -1,0 +1,75 @@
+.payment-wrapper
+  pa: 35px 0px 140px
+
+.payment
+  &__
+    &title
+      ft: uppercase
+      mb: 55px
+
+    &wrapper
+      d: flex
+      ai: flex-start
+      flex-direction: column
+      
+      +mq-lg
+        flex-direction: row
+        jc: space-between
+
+    &left-side
+      w: 100%
+
+      +mq-lg
+        w: 40%
+    
+    &right-side
+      w: 100%
+
+      +mq-lg
+        w: 60%
+
+    &paragraph-wrapper
+      mt: 20px
+
+      +mq-lg
+        mt: -6px
+
+    &paragraph
+      mb: 23px
+
+.payment-card
+  d: flex
+  ai: flex-start
+  mb: 35px
+
+  &:last-child
+    mb: 0px
+
+  &__
+    &image-wrapper
+      w: 50px
+      h: 50px
+      d: flex
+      ai: center
+      jc: center
+      br-radius: 50%
+      bg-color: var(--theme-accent-green-light)
+      mr: 15px
+
+      +mq-lg
+        w: 66px
+        h: 66px
+        mr: 45px
+
+    &text-wrapper
+      w: 240px
+      mt: -5px
+
+      +mq-md
+        w: 300px
+
+      +mq-lg
+        w: 250px
+
+      +mq-xl
+        w: 285px
